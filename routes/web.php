@@ -109,7 +109,12 @@ Route::group(['middleware'=>'admin'],function(){
  * 前台
  */
 Route::get('/','HomeController@index');
+//前台分类
+Route::get('/fen','HomeController@fen');
+//前台广告
+Route::get('/gu','HomeController@gu');
 
+Route::get('/guo/{id}','HomeController@guo');
 Route::group(['middleware'=>'login'],function(){
 	
 

@@ -8,6 +8,7 @@ use App\DCate;
 use App\Ding;
 use App\Gg;
 use App\Hb;
+use App\HuoDong;
 use App\Jubao;
 use App\Pl;
 use App\Sp;
@@ -133,4 +134,21 @@ class HomeController extends Controller
     }
 
 
+    public function fen()
+    {
+         return view('home.fenlei.fen');
+    }
+
+     public function gu()
+    {   
+        $huodong = HuoDong::all();
+         return view('home.guang.gu',compact('huodong'));
+    }
+
+    public function guo($id)
+    {   
+        
+        $huo = HuoDong::findOrFail($id);
+         return view('home.guang.guo',compact('huo'));
+    }
 }
