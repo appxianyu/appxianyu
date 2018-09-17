@@ -32,10 +32,10 @@
                             </select>
                         </div>
                     </div>
-                    <div class="am-form-group">
-                        <label class="am-u-sm-3 am-form-label">商品简介</label>
+                   <div class="am-form-group">
+                        <label class="am-u-sm-3 am-form-label">内容</label>
                         <div class="am-u-sm-9">
-                            <textarea class="" name="intro" rows="5" value="{{$Gg['intro']}}">{{$Gg['intro']}}</textarea>
+                            <script id="editor" type="text/plain" name="intro" style="width:100%;height:350px;">{!!$Gg['intro']!!}</script>
                         </div>
                     </div>
                     <div class="am-form-group">
@@ -72,7 +72,12 @@
                             <input type="text" name="money" class="tpl-form-input" id="user-name" placeholder="" value="{{$Gg['money']}}">
                         </div>
                     </div>
-
+                     <div class="am-form-group">
+                        <label for="user-name" class="am-u-sm-3 am-form-label">标题 <span class="tpl-form-line-small-title"></span></label>
+                        <div class="am-u-sm-9">
+                            <input type="text" name="title" class="tpl-form-input" id="user-name" value="{{$Gg['title']}}" placeholder="">
+                        </div>
+                    </div>
                     <div class="am-form-group">
                         <label for="user-name" class="am-u-sm-3 am-form-label">城市<span class="tpl-form-line-small-title"></span></label>
                         <div class="am-u-sm-9" id="city_china">

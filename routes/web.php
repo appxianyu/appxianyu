@@ -108,10 +108,41 @@ Route::group(['middleware'=>'admin'],function(){
 /**
  * 前台
  */
+
+//首页
 Route::get('/','HomeController@index');
 
+
+//分类
+Route::get('/zongcate','HomeController@zongcate');
+
+//分类页面
+Route::get('/appxcate','HomeController@appxcate');
+
+//前台广告
+Route::get('/gu','HomeController@gu');
+
+//广告页面
+Route::get('/guo/{id}','HomeController@guo');
+
 Route::group(['middleware'=>'login'],function(){
-	
+
 
 });
 
+//app我的
+Route::get('/wode', 'HomeController@wode');
+
+//登录
+Route::get('/login', 'HomeController@login');
+Route::post('/login', 'HomeController@dologin');
+
+
+//退出
+Route::get('/logout','HomeController@logout');
+
+//用户注册
+Route::get('/zhuce','HomeController@zhuce');
+
+//注册提交
+Route::post('/zhuce','HomeController@reg');
