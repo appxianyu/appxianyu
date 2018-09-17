@@ -9,6 +9,7 @@ use App\Ding;
 use App\Gg;
 use App\Hb;
 use App\Jubao;
+use App\Logo;
 use App\Pl;
 use App\Sp;
 use App\Tag;
@@ -46,12 +47,13 @@ class HomeController extends Controller
         $gg = Gg::all();
         $user = User::all();
         $youlians = Youlian::all();
+        $logos = Logo::orderBy('id','asc')->paginate(3);
         $users = Session()->get('id');
         $shang = Sp::where('orlogin','0')->where('user_id',session('id'))->count();
         $pin = Sp::where('orlogin','1')->where('user_id',session('id'))->count();
+        $xpbg = Sp::orderBy('created_at','asc')->paginate(4);
 
-
-        return view('home.index',compact('dcate','xcate','xxcate','shangpin','gw','user','users','shang','pin','women','tags','youlians','gg','peizhi','huobans'));
+        return view('home.index',compact('dcate','xcate','xxcate','shangpin','gw','user','users','shang','pin','women','tags','youlians','gg','peizhi','huobans','logos','xpbg'));
 
 
     }
