@@ -107,13 +107,7 @@
 	</div>
 </div>
 <div style="height:48px"></div>
-<div class="tab-bar tab-bottom">
-	<a class="tab-button cached" href="index.html"><i class="tab-button-icon icon icon-home"></i><span class="tab-button-txt">首页</span></a>
-	<a class="tab-button cached" href="life.html"><i class="tab-button-icon icon icon-exhibition" ></i><span class="tab-button-txt">生活</span></a>
-	<a class="tab-button cached" href="classs.html"><i class="tab-button-icon icon icon-service" ></i><span class="tab-button-txt">分类</span></a>
-	<a class="tab-button cached" href="car.html"><i class="tab-button-icon icon icon-car"></i><span class="tab-button-txt">购物车</span></a>
-	<a class="tab-button active" href="/wode"><i class="tab-button-icon icon icon-my" ></i><span class="tab-button-txt">我的</span></a>
-</div>
+@include('layouts.home._menu')
 <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
 <script class="demo-script">
 	$(window).scroll(function () {
