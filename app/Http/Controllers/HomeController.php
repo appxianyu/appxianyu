@@ -134,10 +134,7 @@ class HomeController extends Controller
     }
 
 
-    public function fen()
-    {
-         return view('home.fenlei.fen');
-    }
+  
 
      public function gu()
     {   
@@ -150,5 +147,12 @@ class HomeController extends Controller
         
         $huo = HuoDong::findOrFail($id);
          return view('home.guang.guo',compact('huo'));
+    }
+
+    //商品详情页面
+    public function sp($id)
+    {
+      $shangpin = Sp::findOrFail($id);
+         return view('home.xq.xqq',compact('shangpin'));
     }
 }
