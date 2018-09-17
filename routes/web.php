@@ -108,10 +108,18 @@ Route::group(['middleware'=>'admin'],function(){
 /**
  * 前台
  */
+
+//首页
 Route::get('/','HomeController@index');
 
+//分类
+Route::get('/zongcate','HomeController@zongcate');
+
+//分类页面
+Route::get('/appxcate','HomeController@appxcate');
+
 Route::group(['middleware'=>'login'],function(){
-	
+
 
 });
 
