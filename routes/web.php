@@ -115,3 +115,19 @@ Route::group(['middleware'=>'login'],function(){
 
 });
 
+//app我的
+Route::get('/wode', 'HomeController@wode');
+
+//登录
+Route::get('/login', 'HomeController@login');
+Route::post('/login', 'HomeController@dologin');
+
+
+//退出
+Route::get('/logout','HomeController@logout');
+
+//用户注册
+Route::get('/zhuce','HomeController@zhuce');
+
+//注册提交
+Route::post('/zhuce','HomeController@reg');
