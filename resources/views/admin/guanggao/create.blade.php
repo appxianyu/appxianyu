@@ -30,12 +30,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="am-form-group">
-                        <label class="am-u-sm-3 am-form-label">商品简介</label>
-                        <div class="am-u-sm-9">
-                            <textarea class="" name="intro" rows="5"></textarea>
-                        </div>
-                    </div>
+                   
                     <div class="am-form-group">
                         <label for="user-weibo" class="am-u-sm-3 am-form-label">商品图片 </label>
                         <div class="am-u-sm-9">
@@ -59,6 +54,18 @@
                         <label for="user-name" class="am-u-sm-3 am-form-label">价格 <span class="tpl-form-line-small-title"></span></label>
                         <div class="am-u-sm-9">
                             <input type="text" name="money" class="tpl-form-input" id="user-name" placeholder="">
+                        </div>
+                    </div>
+                    <div class="am-form-group">
+                        <label for="user-name" class="am-u-sm-3 am-form-label">标题 <span class="tpl-form-line-small-title"></span></label>
+                        <div class="am-u-sm-9">
+                            <input type="text" name="title" class="tpl-form-input" id="user-name" placeholder="">
+                        </div>
+                    </div>
+                     <div class="am-form-group">
+                        <label class="am-u-sm-3 am-form-label">内容</label>
+                        <div class="am-u-sm-9">
+                            <script id="editor" type="text/plain" name="intro" style="width:100%;height:350px;"></script>
                         </div>
                     </div>
                     <div class="am-form-group">

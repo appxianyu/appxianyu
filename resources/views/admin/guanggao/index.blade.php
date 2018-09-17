@@ -42,6 +42,7 @@
                             <th class="table-title">主图</th>
                             <th class="table-id">成色</th>
                             <th class="table-id">价格</th>
+                            <th class="table-id">标题</th>
                             <th class="table-title">所在地</th>
                             <th class="table-id">排序</th>
                             <th class="table-set">操作</th>
@@ -70,6 +71,7 @@
                                 @if($v['cheng'] == 0)非全新@endif
                             </td>
                             <td>{{$v['money']}}</td>
+                            <td>{{$v['title']}}</td>
                             <td>{{$v['quyu']}}</td>
                             <td>{{$v['orby']}}</td>
                             <td>

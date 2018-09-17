@@ -8,6 +8,7 @@ use App\DCate;
 use App\Ding;
 use App\Gg;
 use App\Hb;
+use App\HuoDong;
 use App\Jubao;
 use App\Pl;
 use App\Sp;
@@ -131,4 +132,86 @@ class HomeController extends Controller
         return view('home.xcate',compact('xxcate'));
     }
 
+    //app我的
+    public function wode()
+    {
+        return view('home.me.wode');
+    }
+
+    //app登录
+    public function login()
+    {
+        return view('home.me.login');
+    }
+
+    //app登录操作
+    public function dologin(Request $request)
+    {   
+        //获取用户的数据
+        $user = User::where('username',$request->username)->first();
+        // dd($user);
+        
+        if(!$user){
+            return back()->with('error','登录失败');
+        }
+
+        //校验密码
+        if(Hash::check($request->password, $user->password)){
+            //写入session
+            session(['username'=>$user->username, 'id'=>$user->id,'pic'=>$user->pic]);
+            return redirect('/')->with('success','登录成功');
+        }else{
+            return back()->with('error','登录失败');
+        }
+         
+    }
+
+     //退出登入
+    public function logout(Request $request)
+    {
+        //
+        $request->session()->flush();
+
+        return redirect('/login')->with('success','退出成功');
+    }
+
+
+    //用户注册
+    public function zhuce()
+    {
+        return view('home.me.zhuce');
+    }
+
+
+    //注册
+    public function reg(Request $request)
+    {
+
+        $user = new User;
+
+        $user -> username = $request->username;
+        $user -> password = Hash::make($request->password);
+
+        if($user -> save()){
+            return redirect('/')->with('success','添加成功');
+        }else{
+            return back()->with('error','添加失败');
+        }
+    }
+
+
+    //生活第一页面
+     public function gu()
+    {   
+        $huodong = HuoDong::all();
+         return view('home.guang.gu',compact('huodong'));
+    }
+
+    //胜过第二页面
+    public function guo($id)
+    {   
+        
+        $huo = HuoDong::findOrFail($id);
+         return view('home.guang.guo',compact('huo'));
+    }
 }
