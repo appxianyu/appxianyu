@@ -110,6 +110,10 @@ Route::group(['middleware'=>'admin'],function(){
  */
 Route::get('/','HomeController@index');
 
+//前台广告
+Route::get('/gu','HomeController@gu');
+
+Route::get('/guo/{id}','HomeController@guo');
 Route::group(['middleware'=>'login'],function(){
 	
 

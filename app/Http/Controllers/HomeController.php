@@ -8,6 +8,7 @@ use App\DCate;
 use App\Ding;
 use App\Gg;
 use App\Hb;
+use App\HuoDong;
 use App\Jubao;
 use App\Pl;
 use App\Sp;
@@ -201,4 +202,18 @@ class HomeController extends Controller
     }
 
 
+    //生活第一页面
+     public function gu()
+    {   
+        $huodong = HuoDong::all();
+         return view('home.guang.gu',compact('huodong'));
+    }
+
+    //胜过第二页面
+    public function guo($id)
+    {   
+        
+        $huo = HuoDong::findOrFail($id);
+         return view('home.guang.guo',compact('huo'));
+    }
 }

@@ -61,6 +61,7 @@ class GgController extends Controller
         $Gg -> image = $request ->image;
         $Gg -> cheng = $request ->cheng;
         $Gg -> money = $request ->money;
+        $Gg -> title = $request ->title;
         $Gg -> quyu = $request ->quyu;
         $Gg -> orby = $request ->orby;
         $Gg -> xxcate_id = $request ->xxcate_id;
@@ -119,6 +120,7 @@ class GgController extends Controller
         $Gg -> xxcate_id = $request ->xxcate_id;
         $Gg -> cheng = $request ->cheng;
         $Gg -> money = $request ->money;
+        $Gg -> title = $request ->title;
         $Gg -> province = $request->province;
         $Gg -> city = $request->city;
         $Gg -> area = $request->area;
