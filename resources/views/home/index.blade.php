@@ -180,7 +180,7 @@
 		
 		@foreach($shangpin as $v)
 		
-		<a href="'">
+		<a href="/{{$v['id']}}.html">
 			<div class="aui-flex" style="float:left;">
 			
 			<div class="aui-flex-item aui-flex-items1 aui-flex-items2">

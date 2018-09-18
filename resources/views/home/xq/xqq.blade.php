@@ -27,25 +27,21 @@
 			<div class="tempWrap" style="overflow:hidden; position:relative;">
 				<ul id="Gallery" class="gallery" style="width: 2250px; position: relative; overflow: hidden; padding: 0px; margin: 0px; transition-duration: 200ms; transform: translate(-1125px, 0px) translateZ(0px);">
 					<li style="display: table-cell; vertical-align: top; width: 375px;" >
-						<a href="#"><img src="images/banner/banner1.jpg"></a>
+						<a href="#"><img src="{{$shangpin['image']}}"></a>
 					</li>
 					<li style="display: table-cell; vertical-align: top; width: 375px;">
-						<a href="#"><img src="images/banner/banner2.jpg"></a>
+						<a href="#"><img src="{{$shangpin['image']}}"></a>
 					</li>
 					<li style="display: table-cell; vertical-align: top; width: 375px;" >
-						<a href="#"><img src="images/banner/banner3.jpg"></a>
+						<a href="#"><img src="{{$shangpin['image']}}"></a>
 					</li>
 					<li style="display: table-cell; vertical-align: top; width: 375px;">
-						<a href="#"><img src="images/banner/banner4.jpg"></a>
+						<a href="#"><img src="{{$shangpin['image']}}"></a>
 					</li>
 				</ul>
 			</div>
 		</div>
-		<div class="hd">
-			<ul>
-				<li class="">1</li>
-			</ul>
-		</div>
+		
 	</div>
 </div>
 <!-- 首页轮播 end -->
