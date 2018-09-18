@@ -183,4 +183,26 @@ class CarController extends Controller
         
         
     }
+
+
+    //app前台购物车
+    public function car()
+    {
+        $car = new Car;
+        $car = Car::all();
+        // dd($car);
+        return view('home.car.index',compact('car'));  
+    }
+
+    //购物车删除
+    public function qrsc(Request $request)
+    {
+
+        $shan = Car::findOrFail($request->shangpin_id);
+        if($shan->delete()){
+            return back()->with('success','删除成功');
+        }else{
+            return back()->with('error','删除失败');
+        }
+    }
 }
