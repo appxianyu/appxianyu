@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title>歪秀购物</title>
-	<link rel="stylesheet" type="text/css" href="css/ui.css">
+	<link rel="stylesheet" type="text/css" href="/appindex/css/ui.css">
 	<link href="favicon.ico" type="image/x-icon" rel="icon">
 	<link href="iTunesArtwork@2x.png" sizes="114x114" rel="apple-touch-icon-precomposed">
 </head>
@@ -44,9 +44,6 @@
 		<div class="hd">
 			<ul>
 				<li class="">1</li>
-				<li class="">2</li>
-				<li class="">3</li>
-				<li class="">4</li>
 			</ul>
 		</div>
 	</div>
@@ -57,7 +54,7 @@
 	<h2 class="title">{{$shangpin['title']}}</h2>
 	<div class="price ">
 		<div class="current-price">
-			<span class="current-price"><small>￥</small>399.00</span>
+			<span class="current-price"><small>￥</small>{{$shangpin['money']}}</span>
 		</div>
 		<span class="express">¥20.00</span>
 	</div>
@@ -66,21 +63,19 @@
 
 <section class="sku">
 	<dl class="sku-group">
-		<dt>颜色: </dt>
-		<dd>浅蓝色</dd>
+		
+		<dd>成色: <b>@if ($shangpin['cheng'] == 0 )全新 @else 非全新@endif</b></dd>
 	</dl>
 </section>
 
 <section class="content">
 	<div class="nav">
-		<a class="active">商品详细</a>
+		<a class="active">同类商品</a>
 		<a>商品评论</a>
 	</div>
 	<div class="desc">
 		<img src="images/banner/banner1.jpg" width="100%">
-		<img src="images/banner/banner1.jpg" width="100%">
-		<img src="images/banner/banner1.jpg" width="100%">
-		<img src="images/banner/banner1.jpg" width="100%">
+		
 	</div>
 
 </section>

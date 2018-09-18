@@ -8,6 +8,12 @@
 	<link rel="stylesheet" type="text/css" href="/appindex/css/ui.css">
 	<link href="favicon.ico" type="image/x-icon" rel="icon">
 	<link href="iTunesArtwork@2x.png" sizes="114x114" rel="apple-touch-icon-precomposed">
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+	 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/holder/2.9.4/holder.min.js"></script>
+ 
 </head>
 <body>
 
@@ -26,39 +32,46 @@
 				</a>
 			</div>
 		</div>
-		<div style="height:50px"></div>
+		<div style="height:50px" ></div>
 		<!-- 头部 End-->
 		<!-- 首页轮播 begin -->
-		<div class="aui-banner-content">
-			<div id="focus" class="focus">
-				<div class="bd">
-					<div class="tempWrap" style="overflow:hidden; position:relative;">
-						<ul id="Gallery" class="gallery" style="width: 2250px; position: relative; overflow: hidden; padding: 0px; margin: 0px; transition-duration: 200ms; transform: translate(-1125px, 0px) translateZ(0px);">
-							<li style="display: table-cell; vertical-align: top; width: 375px;" >
-								<a href="#"><img src="/appindex/js/pd/img/banner1.jpg"></a>
-							</li>
-							<li style="display: table-cell; vertical-align: top; width: 375px;">
-								<a href="#"><img src="/appindex/js/pd/img/banner2.jpg"></a>
-							</li>
-							<li style="display: table-cell; vertical-align: top; width: 375px;" >
-								<a href="#"><img src="/appindex/js/pd/img/banner1.jpg"></a>
-							</li>
-							<li style="display: table-cell; vertical-align: top; width: 375px;">
-								<a href="#"><img src="/appindex/js/pd/img/banner2.jpg"></a>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="hd">
-					<ul>
-						<li class="">1</li>
-						<li class="">2</li>
-						<li class="">3</li>
-						<li class="">4</li>
-					</ul>
-				</div>
-			</div>
-		</div>
+				<div class="aui-banner-content" style="width:412px;height:200px;margin-right:0px">
+	        <div id="carousel-example-generic" class="carousel slide aui-banner-content" data-ride="carousel" >
+	            <!-- Indicators -->
+	            <ol class="carousel-indicators">
+	                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+	                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+	                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+	            </ol>
+	            <!-- Wrapper for slides -->
+	            <div class="carousel-inner" role="listbox" style="width:412px;height:200px">
+	                <div class="item active">
+	                    <img src="{{$peizhi['pic1']}}" alt="狐狸王董事会.自小组成立以来团结合作,互利共赢共同营造美好的未来">
+	                    <div class="carousel-caption">
+	                    </div>
+	                </div>
+	                <div class="item">
+	                    <img src="{{$peizhi['pic2']}}" width="872" height="400" alt="...">
+	                    <div class="carousel-caption">
+	                    </div>
+	                </div>
+	                <div class="item">
+	                    <img src="{{$peizhi['pic3']}}" width="872" height="400" alt="...">
+	                    <div class="carousel-caption">
+	                    </div>
+	                </div>
+	            </div>
+	            <!-- Controls -->
+	            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+	                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	                <span class="sr-only">Previous</span>
+	            </a>
+	            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+	                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	                <span class="sr-only">Next</span>
+	            </a>
+	        </div>
+	    </div>
 		<!-- 首页轮播 end -->
 		<!-- 分类切换 begin -->
 		<div class="" id="container" >
@@ -119,58 +132,7 @@
 										</li>
 									</ul>
 								</div>
-								<!--<div class="swiper-slide swiper-slide-duplicate " >-->
-									<!--<ul class="icon-list">-->
-										<!--<li class="icon">-->
-											<!--<a href="#">-->
-												<!--<span class="icon-circle"><img src="/appindex/js/ba/img/icon-tuan.png"></span>-->
-												<!--<span class="icon-desc">红包</span>-->
-											<!--</a>-->
-										<!--</li>-->
-										<!--<li class="icon">-->
-											<!--<a href="#">-->
-												<!--<span class="icon-circle"><img src="/appindex/js/ba/img/icon-tuan1.png"></span>-->
-												<!--<span class="icon-desc">签到</span>-->
-											<!--</a>-->
-										<!--</li>-->
-										<!--<li class="icon">-->
-											<!--<a href="#">-->
-												<!--<span class="icon-circle"><img src="/appindex/js/ba/img/icon-tuan2.png"></span>-->
-												<!--<span class="icon-desc">新品</span>-->
-											<!--</a>-->
-										<!--</li>-->
-										<!--<li class="icon">-->
-											<!--<a href="#">-->
-												<!--<span class="icon-circle"><img src="/appindex/js/ba/img/icon-tuan3.png"></span>-->
-												<!--<span class="icon-desc">团购</span>-->
-											<!--</a>-->
-										<!--</li>-->
-										<!--<li class="icon">-->
-											<!--<a href="#">-->
-												<!--<span class="icon-circle"><img src="/appindex/js/ba/img/icon-tuan4.png"></span>-->
-												<!--<span class="icon-desc">分类</span>-->
-											<!--</a>-->
-										<!--</li>-->
-										<!--<li class="icon">-->
-											<!--<a href="#">-->
-												<!--<span class="icon-circle"><img src="/appindex/js/ba/img/icon-tuan5.png"></span>-->
-												<!--<span class="icon-desc">生活</span>-->
-											<!--</a>-->
-										<!--</li>-->
-										<!--<li class="icon">-->
-											<!--<a href="#">-->
-												<!--<span class="icon-circle"><img src="/appindex/js/ba/img/icon-tuan6.png"></span>-->
-												<!--<span class="icon-desc">秀秀</span>-->
-											<!--</a>-->
-										<!--</li>-->
-										<!--<li class="icon">-->
-											<!--<a href="#">-->
-												<!--<span class="icon-circle"><img src="/appindex/js/ba/img/icon-tuan7.png"></span>-->
-												<!--<span class="icon-desc">达人</span>-->
-											<!--</a>-->
-										<!--</li>-->
-									<!--</ul>-->
-								<!--</div>-->
+								
 							</div>
 							<!--<div class="swiper-pagination swiper-pagination2 ">-->
 								<!--<span class="swiper-pagination-bullet "></span>-->
@@ -184,196 +146,108 @@
 		<!-- 分类切换 end -->
 		<div class="devider t-line"></div>
 		<div class="b-line" style="position:relative"></div>
-		<div class="b-line">
-			<a class="home-inform aui-home-inform" data-href="home-slogan.html" target="navView" rel="slogan">
-				<i class="name icon-inform"></i>
-				<span style="font-size:14px; padding-left:5px">APP新版本上线换一种方式购物</span>
-			</a>
-		</div>
-		<div class="my-car-thumbnail"><img src="/appindex/images/img/banner-car.jpg"></div>
 
 		<div class="aui-title-h">
 			<h2>大牌热卖</h2>
 		</div>
 		<div class="aui-flex">
+			
+			@foreach($logos as $v)
 			<div class="aui-flex-item aui-flex-items">
 		<span>
-			<a href="page.html"><img src="/appindex/images/img/b1.jpg"></a>
-		</span>
-				<a href="#" class="aui-flex-box">新款上市</a>
-			</div>
-			<div class="aui-flex-item aui-flex-items">
-		<span>
-			<a href="page.html"><img src="/appindex/images/img/b2.jpg"></a>
-		</span>
-				<a href="#" class="aui-flex-box">爱美装扮</a>
-
-			</div>
-			<div class="aui-flex-item aui-flex-items">
-		<span>
-			<a href="page.html"><img src="/appindex/images/img/b3.jpg"></a>
+			<a href="#"><img style="width:100px;height:100px" src="{{$v['image']}}"></a>
 		</span>
 				<a href="#" class="aui-flex-box">热潮时代</a>
 			</div>
+			@endforeach
 		</div>
 		<div class="aui-title-h">
 			<h2>新品必购</h2>
 		</div>
 		<div class="aui-flex">
+		@foreach($xpbg as $v)
 			<div class="aui-flex-item aui-flex-items1">
 		<span>
-			<img src="/appindex/images/img/xiao1.jpg">
+			<img style="width:120px;height:100px" src="{{$v['image']}}">
 		</span>
 			</div>
-			<div class="aui-flex-item aui-flex-items1">
-		<span>
-			<img src="/appindex/images/img/xiao2.jpg">
-		</span>
-
-			</div>
-			<div class="aui-flex-item aui-flex-items1">
-		<span>
-			<img src="/appindex/images/img/xiao3.jpg">
-		</span>
-
-			</div>
-			<div class="aui-flex-item aui-flex-items1">
-		<span>
-			<img src="/appindex/images/img/xiao34.jpg">
-		</span>
-
-			</div>
+		@endforeach
 		</div>
 		<div class="aui-title-h">
 			<h2>新品上架</h2>
 		</div>
-		<div class="aui-flex">
+		
+		
+		@foreach($shangpin as $v)
+		
+		<a href="'">
+			<div class="aui-flex" style="float:left;">
+			
 			<div class="aui-flex-item aui-flex-items1 aui-flex-items2">
 		<span>
-			<img src="/appindex/images/img/b4.jpg">
+			<img src="{{$v['image']}}">
 		</span>
-				<a href="#" class="aui-flex-box">
-					<h2>依依衣舍韩版2017春装新款女装宽松显瘦直筒裤破洞牛仔裤HH5296妠 </h2>
-					<em>￥199.00</em>
+				<a href="/{{$v['id']}}.html" class="aui-flex-box">
+					<h2>{{$v['title']}}</h2>
+					<em>{{$v['money']}}</em>
 				</a>
 			</div>
-			<div class="aui-flex-item aui-flex-items1 aui-flex-items2">
-		<span>
-			<img src="/appindex/images/img/b5.jpg">
-		</span>
-				<a href="#" class="aui-flex-box">
-					<h2>依依衣舍韩版2017春装新款女装宽松显瘦直筒裤破洞牛仔裤HH5296妠 </h2>
-					<em>￥199.00</em>
-				</a>
-			</div>
-		</div>
-		<div class="aui-flex">
-			<div class="aui-flex-item aui-flex-items1 aui-flex-items2">
-		<span>
-			<img src="/appindex/images/img/b7.jpg">
-		</span>
-				<a href="page.html" class="aui-flex-box">
-					<h2>依依衣舍韩版2017春装新款女装宽松显瘦直筒裤破洞牛仔裤HH5296妠 </h2>
-					<em>￥199.00</em>
-				</a>
-			</div>
-			<div class="aui-flex-item aui-flex-items1 aui-flex-items2">
-		<span>
-			<img src="/appindex/images/img/b6.jpg">
-		</span>
-				<a href="#" class="aui-flex-box">
-					<h2>依依衣舍韩版2017春装新款女装宽松显瘦直筒裤破洞牛仔裤HH5296妠 </h2>
-					<em>￥199.00</em>
-				</a>
-			</div>
-		</div>
-		<div class="aui-flex">
-			<div class="aui-flex-item aui-flex-items1 aui-flex-items2">
-		<span>
-			<img src="/appindex/images/img/b8.jpg">
-		</span>
-				<a href="#" class="aui-flex-box">
-					<h2>依依衣舍韩版2017春装新款女装宽松显瘦直筒裤破洞牛仔裤HH5296妠 </h2>
-					<em>￥199.00</em>
-				</a>
-			</div>
-			<div class="aui-flex-item aui-flex-items1 aui-flex-items2">
-		<span>
-			<img src="/appindex/images/img/b4.jpg">
-		</span>
-				<a href="#" class="aui-flex-box">
-					<h2>依依衣舍韩版2017春装新款女装宽松显瘦直筒裤破洞牛仔裤HH5296妠 </h2>
-					<em>￥199.00</em>
-				</a>
-			</div>
-		</div>
-		<div class="aui-flex">
-			<div class="aui-flex-item aui-flex-items1 aui-flex-items2">
-		<span>
-			<img src="/appindex/images/img/b4.jpg">
-		</span>
-				<a href="#" class="aui-flex-box">
-					<h2>依依衣舍韩版2017春装新款女装宽松显瘦直筒裤破洞牛仔裤HH5296妠 </h2>
-					<em>￥199.00</em>
-				</a>
-			</div>
-			<div class="aui-flex-item aui-flex-items1 aui-flex-items2">
-		<span>
-			<img src="/appindex/images/img/b4.jpg">
-		</span>
-				<a href="#" class="aui-flex-box">
-					<h2>依依衣舍韩版2017春装新款女装宽松显瘦直筒裤破洞牛仔裤HH5296妠 </h2>
-					<em>￥199.00</em>
-				</a>
-			</div>
-		</div>
-		<div class="aui-flex">
-			<div class="aui-flex-item aui-flex-items1 aui-flex-items2">
-		<span>
-			<img src="/appindex/images/img/b4.jpg">
-		</span>
-				<a href="#" class="aui-flex-box">
-					<h2>依依衣舍韩版2017春装新款女装宽松显瘦直筒裤破洞牛仔裤HH5296妠 </h2>
-					<em>￥199.00</em>
-				</a>
-			</div>
-			<div class="aui-flex-item aui-flex-items1 aui-flex-items2">
-		<span>
-			<img src="/appindex/images/img/b4.jpg">
-		</span>
-				<a href="#" class="aui-flex-box">
-					<h2>依依衣舍韩版2017春装新款女装宽松显瘦直筒裤破洞牛仔裤HH5296妠 </h2>
-					<em>￥199.00</em>
-				</a>
-			</div>
-		</div>
+		</div></a>
+		@endforeach
 		<div style="height:44px"></div>
-		<div class="tab-bar tab-bottom">
-			<a class="tab-button active" href="index.html"><i class="tab-button-icon icon icon-home"></i><span class="tab-button-txt">首页</span></a>
-			<a class="tab-button cached" href="/gu"><i class="tab-button-icon icon icon-exhibition" ></i><span class="tab-button-txt">生活</span></a>
-			<a class="tab-button cached" href="classs.html"><i class="tab-button-icon icon icon-service" ></i><span class="tab-button-txt">分类</span></a>
-			<a class="tab-button cached" href="car.html"><i class="tab-button-icon icon icon-car"></i><span class="tab-button-txt">购物车</span></a>
-			<a class="tab-button cached" href="me.html"><i class="tab-button-icon icon icon-my" ></i><span class="tab-button-txt">我的</span></a>
-		</div>
+		@include('layouts.home._menu')
 	</div>
 </div>
 
 
 <script type="text/javascript" src="/appindex/js/pd/jquery-1.9.1.min./appindex/js"></script>
 <script type="text/javascript" src="/appindex/js/pd/aui-touchSlide./appindex/js"></script>
+
 <script>
-	/*banner首页轮播*/
-	TouchSlide({
-		slideCell : "#focus",
-		titCell : ".hd ul", // 开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
-		mainCell : ".bd ul",
-		effect : "leftLoop",
-		autoPlay : true, // 自动播放
-		autoPage : true, // 自动分页
-		delayTime: 200, // 毫秒；切换效果持续时间（执行一次效果用多少毫秒）
-		interTime: 5000, // 毫秒；自动运行间隔（隔多少毫秒后执行下一个效果）
-		switchLoad : "_src" // 切换加载，真实图片路径为"_src"
-	});
+	var index = -1;
+		var timer = null;
+
+		$('#dots li').mouseover(function(){
+			//清除定时器
+			clearInterval(timer);
+			//修改图片的显示的内容
+			index  = $(this).index();
+			//显示当前索引的图片和点
+			show(index);
+		}).mouseout(function(){
+			// 启动定时器
+			autoRun();
+		});
+
+		//自动变化
+		function autoRun() {
+			timer = setInterval(function(){
+				index++;
+				//显示当前索引对应 图片和点
+				show(index);
+				//判断
+				if(index >= $('#images li').length-1) {
+					index = -1;
+				}
+			}, 2000);
+		}
+		//显示当前索引对应图片和点
+		function show(index) {
+			//0    0
+			//1    -450
+			//2    -900
+			//3    -1350
+			//n    -n*450  
+
+			//点样式发生改变
+			$('#dots li').removeClass('active');
+			$('#dots li').eq(index).addClass('active');
+			//切换图片
+			// $('#images').css('left', '-'+index*450+'px');
+			$('#images').animate({left: '-'+index*450+'px'}, 1000)
+		}
+		autoRun();
+
 </script>
 <script src="/appindex/js/ba/aui-scroll./appindex/js" type="text/javascript" charset="utf-8"></script>
 <script src="/appindex/js/ba/aui-index./appindex/js" type="text/javascript" charset="utf-8"></script>
