@@ -115,3 +115,8 @@ Route::group(['middleware'=>'login'],function(){
 
 });
 
+//前台购物车
+Route::get('/car','CarController@car');
+
+//购物车删除
+Route::get('/qrsc','CarController@qrsc');
