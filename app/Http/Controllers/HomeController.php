@@ -8,7 +8,9 @@ use App\DCate;
 use App\Ding;
 use App\Gg;
 use App\Hb;
+use App\HuoDong;
 use App\Jubao;
+use App\Logo;
 use App\Pl;
 use App\Sp;
 use App\Tag;
@@ -46,14 +48,13 @@ class HomeController extends Controller
         $gg = Gg::all();
         $user = User::all();
         $youlians = Youlian::all();
+        $logos = Logo::orderBy('id','asc')->paginate(3);
         $users = Session()->get('id');
         $shang = Sp::where('orlogin','0')->where('user_id',session('id'))->count();
         $pin = Sp::where('orlogin','1')->where('user_id',session('id'))->count();
+        $xpbg = Sp::orderBy('created_at','asc')->paginate(4);
 
-
-        return view('home.index',compact('dcate','xcate','xxcate','shangpin','gw','user','users','shang','pin','women','tags','youlians','gg','peizhi','huobans'));
-
-
+        return view('home.index',compact('dcate','xcate','xxcate','shangpin','gw','user','users','shang','pin','women','tags','youlians','gg','peizhi','huobans','logos','xpbg'));
     }
 
 
@@ -132,5 +133,109 @@ class HomeController extends Controller
         }
     }
 
+    //分类
+    public function zongcate()
+    {
+        $dcate = DCate::all();
+        return view('home.cate',compact('dcate'));
+    }
 
+    //分类页面
+    public function appxcate(Request $request)
+    {
+        $xxcate = XxCate::where('xcate_id',$request->xcate)->get();
+        
+        return view('home.xcate',compact('xxcate'));
+    }
+
+    //app我的
+    public function wode()
+    {
+        return view('home.me.wode');
+    }
+
+    //app登录
+    public function login()
+    {
+        return view('home.me.login');
+    }
+
+    //app登录操作
+    public function dologin(Request $request)
+    {   
+        //获取用户的数据
+        $user = User::where('username',$request->username)->first();
+        // dd($user);
+        
+        if(!$user){
+            return back()->with('error','登录失败');
+        }
+
+        //校验密码
+        if(Hash::check($request->password, $user->password)){
+            //写入session
+            session(['username'=>$user->username, 'id'=>$user->id,'pic'=>$user->pic]);
+            return redirect('/')->with('success','登录成功');
+        }else{
+            return back()->with('error','登录失败');
+        }
+         
+    }
+
+     //退出登入
+    public function logout(Request $request)
+    {
+        //
+        $request->session()->flush();
+
+        return redirect('/login')->with('success','退出成功');
+    }
+
+
+    //用户注册
+    public function zhuce()
+    {
+        return view('home.me.zhuce');
+    }
+
+
+
+    //注册
+    public function reg(Request $request)
+    {
+
+        $user = new User;
+
+        $user -> username = $request->username;
+        $user -> password = Hash::make($request->password);
+
+        if($user -> save()){
+            return redirect('/')->with('success','添加成功');
+        }else{
+            return back()->with('error','添加失败');
+        }
+    }
+
+
+    //生活第一页面
+     public function gu()
+    {   
+        $huodong = HuoDong::all();
+         return view('home.guang.gu',compact('huodong'));
+    }
+
+    //胜过第二页面
+    public function guo($id)
+    {   
+        
+        $huo = HuoDong::findOrFail($id);
+         return view('home.guang.guo',compact('huo'));
+    }
+
+    //商品详情页面
+    public function sp($id)
+    {
+      $shangpin = Sp::findOrFail($id);
+         return view('home.xq.xqq',compact('shangpin'));
+    }
 }

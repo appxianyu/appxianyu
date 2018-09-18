@@ -32,6 +32,7 @@
 			<div class="main_con_goods">
 				<ul>
 					@foreach($car as $v)
+					@if($v['user_id'] == Session::get('id'))
 					<li>
 						<section class="aui-crl">
 							<span class="circle" aa="{{$v['money']}}" id="sp"></span>
@@ -45,7 +46,7 @@
 						</div>
 						<a href="/qrsc?shangpin_id={{$v['id']}}"><img src="images/icon-png/delete-icon.png" style="width:60px;height: 60px" /></a>
 					</li>
-
+					@endif
 					@endforeach
 				</ul>
 			</div>
